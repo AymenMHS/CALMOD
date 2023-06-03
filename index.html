@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CALMOD</title>
+	<script src="script.js"></script>
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<section id="header">
+		<a class="logo" href="#"><img src="img/logo.png" class="logo" alt="" height="30" width="30"></a>
+		<div class="titrou">
+			<h1>Calcul de Moyenne S2</h1>
+			<h6>By Aymen HS</h6>
+		</div>
+
+		<div>
+			<ul id="navbar">
+				<li><a class="active" href="index.html">Accueil</a></li>
+				<li><a href="details.html">Details</a></li>
+			</ul>
+		</div>
+	</section>
+
+    	<form>
+    		<div class="note1">
+    			<div class="mod">
+    		    	<h1 for="note1">Analyse 2</h1>
+    		    </div>
+    		    <div class="notemod">
+    		    	<label for="note1">Control Continue :</label>
+    		    	<input type="number" id="CC1" name="CC" oninput="calculerMoyenneModule1()">
+    		    	<label for="note1">Examen Final :</label>
+    		    	<input type="number" id="EF1" name="EF" oninput="calculerMoyenneModule1()">
+    		    </div>
+    		    <div class="moymod">
+    		    	<h2>Moyenne du module</h2>
+    		    	<p id="moyenneModule1">...</p>
+    		    </div>
+    		</div>
+    		<div class="note2">
+    			<div class="mod">
+    		    	<h1 for="note1">Algebre 2</h1>
+    		    </div>
+    		    <div class="notemod">
+    		    	<label for="note1">Control Continu :</label>
+    		    	<input type="number" id="CC2" name="CC" oninput="calculerMoyenneModule2()">
+    		    	<label for="note1">Examen Final :</label>
+    		    	<input type="number" id="EF2" name="EF" oninput="calculerMoyenneModule2()">
+    		    </div>
+    		    <div class="moymod">
+    		    	<h2>Moyenne du module</h2>
+    		    	<p id="moyenneModule2">...</p>
+    		    </div>
+    		</div>
+    		<div class="note3">
+    			<div class="mod">
+    		    	<h1 for="note1">Algorithmique 2</h1>
+    		    </div>
+    		    <div class="notemod">
+    		    	<label for="note1">CC :</label>
+    		    	<input type="number" id="CC6" name="CC" oninput="calculerMoyenneModule6()">
+    		    	<label for="note1">EF :</label>
+    		    	<input type="number" id="EF6" name="EF" oninput="calculerMoyenneModule6()">
+    		    	<label for="note1">TP :</label>
+    		    	<input type="number" id="TP6" name="TP" oninput="calculerMoyenneModule6()">
+    		    </div>
+    		    <div class="moymod">
+    		    	<h2>Moyenne du module</h2>
+    		    	<p id="moyenneModule6">...</p>
+    		    </div>
+    		</div>
+    		<div class="note4">
+    			<div class="mod">
+    		    	<h1 for="note1">Structure Machine 2</h1>
+    		    </div>
+    		    <div class="notemod">
+    		    	<label for="note1">Control Continu :</label>
+    		    	<input type="number" id="CC3" name="CC" oninput="calculerMoyenneModule3()">
+    		    	<label for="note1">Examen Final :</label>
+    		    	<input type="number" id="EF3" name="EF" oninput="calculerMoyenneModule3()">
+    		    </div>
+    		    <div class="moymod">
+    		    	<h2>Moyenne du module</h2>
+    		    	<p id="moyenneModule3">...</p>
+    		    </div>
+    		</div>
+    		<div class="note5">
+    			<div class="mod">
+    		    	<h1 for="note1">Statistique</h1>
+    		    </div>
+    		    <div class="notemod">
+    		    	<label for="note1">Control Continu :</label>
+    		    	<input type="number" id="CC4" name="CC" oninput="calculerMoyenneModule4()">
+    		    	<label for="note1">Examen Final :</label>
+    		    	<input type="number" id="EF4" name="EF" oninput="calculerMoyenneModule4()">
+    		    </div>
+    		    <div class="moymod">
+    		    	<h2>Moyenne du module</h2>
+    		    	<p id="moyenneModule4">...</p>
+    		    </div>
+    		</div>
+    		<div class="note6">
+    			<div class="mod">
+    		    	<h1 for="note1">Physique 2</h1>
+    		    </div>
+    		    <div class="notemod">
+    		    	<label for="note1">Control Continu :</label>
+    		    	<input type="number" id="CC5" name="CC" oninput="calculerMoyenneModule5()">
+    		    	<label for="note1">Examen Final :</label>
+    		    	<input type="number" id="EF5" name="EF" oninput="calculerMoyenneModule5()">
+    		    </div>
+    		    <div class="moymod">
+    		    	<h2>Moyenne du module</h2>
+    		    	<p id="moyenneModule5">...</p>
+    		    </div>
+    		</div>
+    		<div class="note7">
+    			<div class="mod">
+    		    	<h1 for="note1">Techno Web :</h1>
+    		    </div>
+    		  	<div class="notemod">
+    		    	<label for="note1">Examen Final :</label>
+    		    	<input type="number" id="EF7" name="EF" oninput="calculerMoyenneModule7()">
+    		    </div>
+    		    <div class="moymod">
+    		    	<h2>Moyenne du module</h2>
+    		    	<p id="moyenneModule7">...</p>
+    		    </div>
+    		</div>
+    		<div class="note8">
+    			<div class="mod">
+    		    	<h1 for="note1">Calcul Formel :</h1>
+    		    </div>
+    		  	<div class="notemod">
+    		    	<label for="note1">Examen Final :</label>
+    		    	<input type="number" id="EF8" name="EF" oninput="calculerMoyenneModule8()">
+    		    </div>
+    		    <div class="moymod">
+    		    	<h2>Moyenne du module</h2>
+    		    	<p id="moyenneModule8">...</p>
+    		    </div>
+    		</div>
+
+    	<div class="button-container">
+    	    <button onclick="calculerMoyenneGenerale()">Calculer</button>
+    	<div>
+		<h1>Vous Avez : </h1>
+		<p id="moyenneGenerale">...</p>		
+	</div>
+	</form>
+</body>
+</html>
